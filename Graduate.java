@@ -18,6 +18,8 @@ public class Graduate extends Student {
         return this.diplome;
     }
 
+
+
     public void setDiplome(int diplome){
         this.diplome = diplome;
     }
@@ -32,16 +34,14 @@ public class Graduate extends Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-
         Graduate graduate = (Graduate) o;
-
         return diplome == graduate.diplome;
     }
 
     @Override
     public int hashCode() {
         int result = super.hashCode();
-        result = 31 * result + diplome;
+        result = 31 * result + this.diplome;
         return result;
     }
 }

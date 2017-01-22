@@ -17,18 +17,20 @@ public class LifeSchool {
         s.setStudents(new Student("Loic","Martin", LocalDate.of(1998, Month.JULY, 7)));
         System.out.println(s);
         System.out.println("L\'age moyen des élèves est de "+s.ageMoyen()+" ans");
+
         //partie 2
         s.setStudents(new Graduate("Drake","Foudre",LocalDate.of(1990, Month.NOVEMBER,11),2));
         s.setStudents(new Graduate("Solange","Feu",LocalDate.of(1990, Month.DECEMBER,12),5));
         s.setStudents(new Graduate("Johnny","Lumière",LocalDate.of(1990, Month.OCTOBER,1),3));
         System.out.println(s);
-        Graduate etud1 = (Graduate) s.getStudents().get(5);
-        Graduate etud2 = (Graduate) s.getStudents().get(6);
+
+        Graduate etud1 = (Graduate) s.getStudent(5); //Student etud1 = s.getStudent(5);
+        Graduate etud2 = (Graduate) s.getStudent(6); //Student etud2 = s.getStudent(6);
+
         if (etud1.equals(etud2)){
-            System.out.println("Bizarre mais les 2 étudiants sont identiques");
+            System.out.println("Les 2 étudiants sont identiques");
         } else {
             System.out.println("les 2 étudiants "+etud1.getPrenom()+" et "+etud2.getPrenom()+  " sont différents");
         }
-
     }
 }

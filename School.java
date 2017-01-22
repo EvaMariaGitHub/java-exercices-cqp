@@ -21,6 +21,10 @@ public class School {
         this.students.add(student);
     }
 
+    public Student getStudent (int i) {
+        return this.students.get(i);
+    }
+
     public ArrayList<Student> getStudents() {
         return students;
     }
